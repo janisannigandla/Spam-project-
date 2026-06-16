@@ -274,28 +274,60 @@ def predict():
 @login_required
 def alerts():
 
-    if os.path.exists("alerts.json"):
-        all_alerts=json.load(open("alerts.json"))
-        # Filter alerts that belong to the current user's connected app_email
-        all_user_alerts = [a for a in all_alerts if a.get("user_email") == current_user.app_email]
+    if os.path.exists("data/alerts.json"):
+        with open("data/alerts.json", "r") as f:
+            all_alerts = json.load(f)
+
+        all_user_alerts = [
+            a for a in all_alerts
+            if a.get("user_email") == current_user.app_email
+        ]
+
         total_count = len(all_user_alerts)
         alerts = all_user_alerts[-10:]
     else:
-        alerts=[]
+        alerts = []
         total_count = 0
 
-    return jsonify({"alerts":alerts, "total_count": total_count})
+    return jsonify({
+        "alerts": alerts,
+        "total_count": total_count
+    })
+
+@app.route("/view_alert/<int:index>")
+@login_required
+def view_alert(index):
+
+    if not os.path.exists("data/alerts.json"):
+        return "Alert not found"
+
+    with open("data/alerts.json", "r") as f:
+        alerts = json.load(f)
+
+    alerts = [
+        a for a in alerts
+        if a.get("user_email") == current_user.app_email
+    ]
+
+    if index >= len(alerts):
+        return "Alert not found"
+
+    return render_template(
+        "view_alert.html",
+        alert=alerts[index]
+    )
 
 @app.route("/priority")
 @login_required
 def priority():
 
-    if os.path.exists("priority.json"):
-        alerts=json.load(open("priority.json"))
+    if os.path.exists("data/priority.json"):
+        with open("data/priority.json", "r") as f:
+            alerts = json.load(f)
     else:
-        alerts=[]
+        alerts = []
 
-    return jsonify({"alerts":alerts})
+    return jsonify({"alerts": alerts})
 
 if __name__=="__main__":
     app.run(debug=True,port=5001)

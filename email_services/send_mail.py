@@ -38,11 +38,14 @@ def send_notification(to_email, subject, body):
     gmail_link = f"https://mail.google.com/mail/u/0/#search/{quote(subject)}"
 
     new_alert = {
-        "subject": subject,
-        "body": body,
-        "time": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
-        "link": gmail_link,
-        "user_email": to_email
+         "alert_type": "spam",
+         "email_subject": subject,
+         "message": body,
+         "sender": "Unknown",
+         "spam_score": 95,
+         "time": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
+         "link": gmail_link,
+         "user_email": to_email
     }
 
     # Load existing alerts
@@ -69,6 +72,6 @@ def send_notification(to_email, subject, body):
 
 send_notification(
     "janisannigandla226@gmail.com",
-    "Spam Alert",
-    "A spam email was detected."
+    "Congratulations! You Won $1000",
+    "Detected as spam by SpamGuard."
 )

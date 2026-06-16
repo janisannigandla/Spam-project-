@@ -1,9 +1,20 @@
 [
-    {
-        "subject": "Spam Alert",
-        "body": "A spam email was detected.",
-        "time": "18-05-2026 07:09:16",
-        "link": "https://mail.google.com/mail/u/0/#search/Spam%20Alert",
-        "user_email": "janisannigandla226@gmail.com"
-    }
+  {
+    "user_email": "janisannigandla226@gmail.com",
+    "email_id": "514",
+    "subject": "Congratulations! You Won $1000",
+    "body": "Congratulations! You Won $1000\r\n",
+    "full_body": "Congratulations! You Won $1000\r\n",
+    "gmail_link": "https://mail.google.com/mail/u/0/#inbox",
+    "type": "spam"
+  },
+  {
+    "user_email": "janisannigandla226@gmail.com",
+    "email_id": "515",
+    "subject": "Congratulations! You won $5000",
+    "body": "Click here to claim your prize.\r\n",
+    "full_body": "Click here to claim your prize.\r\n",
+    "gmail_link": "https://mail.google.com/mail/u/0/#inbox",
+    "type": "spam"
+  }
 ]

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>{{ alert.subject }}</h1>
+
+    <p>
+        <strong>Time:</strong>
+        {{ alert.time }}
+    </p>
+
+    <hr>
+
+    <pre style="white-space: pre-wrap;">
+{{ alert.full_body }}
+    </pre>
+
+</div>
+
+{% endblock %}

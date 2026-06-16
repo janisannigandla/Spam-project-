@@ -65,6 +65,8 @@ def save_alert(subject, body, user_email):
 
         "body": body,
 
+        "full_body": body,
+
         "time": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
 
         "link": gmail_link,
