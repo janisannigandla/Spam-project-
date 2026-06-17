@@ -1,3 +1,12 @@
 [
-  
+  {
+    "user_email": "janisannigandla226@gmail.com",
+    "email_id": "531",
+    "subject": "All aboard! Welcome to Railway!",
+    "body": "Thanks for trying out Railway, we\u2019ve pulled together some information and resources to help you get started \u00a0\r\n\r\nRailway Logo\r\n\r\n*******************\r\n",
+    "full_body": "Thanks for trying out Railway, we\u2019ve pulled together some information and resources to help you get started \u00a0\r\n\r\nRailway Logo\r\n\r\n*******************\r\nWelcome to Railway!\r\n*******************\r\n\r\nWe\u2019re thrilled to have you on board.\r\n\r\nHere are some resources to help you get started:\r\n\r\n* Read the docs ( https://docs.railway.app/?utm_campaign=PLG+Onboarding+Campaign&utm_content=Welcome&utm_medium=email_action&utm_source=customer.io )\r\n* Create a project ( https://railway.app/new?utm_campaign=PLG+Onboarding+Campaign&utm_content=Welcome&utm_medium=email_action&utm_source=customer.io )\r\n* Deploy a template ( https://railway.app/templates?utm_campaign=PLG+Onboarding+Campaign&utm_content=Welcome&utm_medium=email_action&utm_source=customer.io )\r\n\r\nView the dashboard ( https://railway.app/dashboard?utm_campaign=PLG+Onboarding+Campaign&utm_content=Welcome&utm_medium=email_action&utm_source=customer.io )\r\n\r\nThanks,\r\n\r\nYour friends at Railway\r\n\r\nUnsubscribe from marketing emails ( https://railway.com/preferences?token=20ae3820-a6b7-42ab-8d13-f13c9e223cc3&utm_campaign=PLG+Onboarding+Campaign&utm_content=Welcome&utm_medium=email_action&utm_source=customer.io )\r\n\r\n\u00a9 2026 Railway Corp. All rights reserved.",
+    "gmail_link": "https://mail.google.com/mail/u/0/#inbox",
+    "type": "ham",
+    "link": "https://mail.google.com/"
+  }
 ]

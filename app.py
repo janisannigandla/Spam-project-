@@ -8,7 +8,6 @@ import pickle
 import json
 import os
 from models import db, User, EmailLog
-
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'spamsupersecretkey2026'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///email_spam_members.db'
@@ -355,4 +354,4 @@ import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port, debug=False) 
+    app.run(host="0.0.0.0", port=port, debug=False)
