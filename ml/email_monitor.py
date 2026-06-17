@@ -220,5 +220,10 @@ def monitor_all_users():
                         pass
 
 
+import time
+
 if __name__ == "__main__":
-    monitor_all_users()
+    while True:
+        print("Checking emails...")
+        monitor_all_users()
+        time.sleep(30)   # check every 30 seconds
