@@ -248,25 +248,15 @@ def predict():
     )
     db.session.add(log)
     db.session.commit()
+    from email_services.detect_and_notify import save_alert
+
     if is_spam:
+        save_alert(
+        text[:50],              # subject
+        text,                   # body
+        current_user.app_email  # user email
+    )
 
-     if os.path.exists("data/alerts.json"):
-        with open("data/alerts.json", "r") as f:
-            alerts = json.load(f)
-     else:
-        alerts = []
-
-    alerts.append({
-        "subject": text[:50],
-        "body": text,
-        "full_body": text,
-        "time": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
-        "type": "spam",
-        "user_email": current_user.app_email
-    })
-
-    with open("data/alerts.json", "w") as f:
-        json.dump(alerts, f, indent=4)
     
     # Re-calculate stats for the dashboard
     user_logs = EmailLog.query.filter_by(user_id=current_user.id).all()
