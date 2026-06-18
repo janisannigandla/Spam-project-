@@ -15,9 +15,9 @@ from models import User
 # Load Model
 # ==========================
 
-model = pickle.load(open("spam_model.pkl", "rb"))
+model = pickle.load(open("ml/spam_model.pkl", "rb"))
 
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+vectorizer = pickle.load(open("ml/vectorizer.pkl", "rb"))
 
 # ==========================
 # Function to Send Alert Email
