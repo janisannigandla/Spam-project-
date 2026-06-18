@@ -158,11 +158,14 @@ def monitor_all_users():
 
                         print("Subject:", subject)
                         print("Prediction:", pred)
+                        sender = msg.get("From", "Unknown Sender")
+
 
                         alert_data = {
                             "user_email": EMAIL,
                             "email_id": num.decode(),
                             "subject": subject,
+                            "sender": sender,
                             "body": body[:150],
                             "full_body": body,
                             "gmail_link": "https://mail.google.com/mail/u/0/#inbox"
